@@ -22,7 +22,7 @@ define('DB_NAME', 'stayble_old');
 define('DB_USER', 'root');
 
 /** MySQL-databasens lösenord */
-define('DB_PASSWORD', '');
+define('DB_PASSWORD', 'root');
 
 /** MySQL-server */
 define('DB_HOST', 'localhost');
