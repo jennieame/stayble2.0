@@ -1,0 +1,705 @@
+/*
+Theme Name: stayble
+Theme URI: http://wordpress.org/themes/stayble
+Author: TidyThemes
+Author URI: jennie/
+Description: <strong>UPDATE</strong> - 4.0+ is here, completely overhauled, yet again. As always, <a href="http://tidythemes.com/concept/#upgrading">use caution when upgrading</a> (tidythemes.com/concept/#upgrading) and <a href="http://tidythemes.com/concept/">learn the TidyThemes concept</a> (tidythemes.com/concept). &nbsp; &rarr; <em><strong>CAUTION</strong>: If you're child theming or have clients that are child theming on top of BlankSlate (not the recommended use), please do not blindly upgrade to newer versions.</em> &nbsp; &rarr; <strong>DESCRIPTION</strong>: BlankSlate is the definitive WordPress HTML5 boilerplate starter theme. We've carefully constructed the most clean and minimalist theme available anywhere for designers/developers to use as a base/foundation to build websites for clients or to build completely custom themes from scratch to release faster. Clean, semi-minified, unformatted and valid code, SEO-friendly, no programmer comments, standardized and as white label as possible and most importantly, CSS reset for cross-browser-compatability and no intrusive visual CSS styles added whatsoever. A perfect skeleton theme that blows any others like it (the subsequent underscores.me for example) completely out of the water, as they're simply too overcomplicated for what people really want in this kind of theme. Now comes with jQuery enqueued and ready to go. &nbsp; &rarr; <strong>SUPPORT</strong>: Please use the <a href="http://tidythemes.com/forum/">official support forum</a> (tidythemes.com/forum). Comments and suggestions for improving BlankSlate, please see "<a href="http://tidythemes.com/tidythemes-sucks/">TidyThemes Sucks!</a>" (tidythemes.com/tidythemes-sucks). Just getting started? <a href="http://tidythemes.com/want-to-learn-css/">Want to learn CSS?</a> (tidythemes.com/want-to-learn-css) &nbsp; &rarr; <strong>WHAT'S NEW?</strong>: We stripped down as much custom, extraneous, superfluous junk code as we could and greatly improved the HTML5 structure. <a href="http://make.wordpress.org/themes/author/chipbennett/">Chip Bennett</a> (make.wordpress.org/themes/author/chipbennett), a highly experienced programmer and official WordPress administrator, worked closely with us to audit the theme code for quality. <a href="http://themes.trac.wordpress.org/changeset?old_path=/blankslate/3.3&new_path=/blankslate/4.0">See</a> (themes.trac.wordpress.org/changeset?old_path=/blankslate/3.3&new_path=/blankslate/4.0) just how much we've revamped things. Last, but not least, BlankSlate has now been <a href="https://github.com/tidythemes/blankslate">opened up on GitHub</a> (github.com/tidythemes/blankslate) if anyone would like to make suggested code additions/improvements. Thank you for using BlankSlate.
+Version: 4.0.2
+License: GNU General Public License
+License URI: https://www.gnu.org/licenses/gpl.html
+Tags: black, blue, white, light, one-column, fluid-layout, responsive-layout, custom-menu, featured-images, microformats, sticky-post, threaded-comments, translation-ready
+Text Domain: blankslate
+
+*/
+
+html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video{font-size:100%;font:inherit;padding:0;border:0;margin:0;vertical-align:baseline}body{line-height:1}ol,ul{list-style:none}blockquote,q{quotes:none}blockquote:before,blockquote:after,q:before,q:after{content:'';content:none}table{border-collapse:collapse;border-spacing:0}article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block}.clear{clear:both}
+.sticky{}.bypostauthor{}.wp-caption{}.wp-caption-text{}.gallery-caption{}.alignright{}.alignleft{}.aligncenter{}
+
+*, p{
+	/*text-align: center;*/
+	font-family: 'Source Sans Pro', sans-serif !important;
+	color: #333;
+	line-height: 1.4em;
+	font-size: 1.1em;
+	text-decoration:none !important;
+	margin-bottom: 2%;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-weight: 200 !important;
+	text-transform: uppercase;
+}
+
+h1{
+	font-size: 3em;
+	color: rgba(46,55,109,1.0);
+	padding: 1% 0;
+	line-height: 1.3em;
+	letter-spacing: -1px;
+}
+h2 {
+	font-size: 2em;
+	padding: 1% 0;
+margin-top: 2%;
+}
+h3{
+	font-size: 1.5em;
+	padding: 1% 0;
+	/* color: rgba(130,167,209,1.0); */
+}
+h6{
+	color: #7d3687;
+	font-size: 2em;
+	margin: 5% 0;
+	font-weight:400;
+}
+i{
+	font-style: italic;
+}
+strong{
+	font-weight: 600 !important;
+	color: #82a7d1;
+}
+a{
+	color:#00485b;
+}
+a:hover{
+	color:#C2370C;
+}
+.entry-content li{
+	list-style-color: rgba(130,167,209,1.0);
+	margin-left: 3%;
+}
+.entry-content li:before { 
+content:" • ";  
+color: rgba(130,167,209,1.0);
+font-size:1.2em;
+margin-right: 1%;
+}
+
+#header img {
+width: 20%;
+float: left;
+display: block;
+margin: 15px 0px;
+margin-left: 10%;
+}
+#header{
+overflow: auto;
+width: 100%;
+/* background: rgba(224,225,226,0.9); */
+background: rgba(249,249,249,0.97);
+position: fixed;
+z-index: 10000;
+}
+
+/*---Menu ---*/
+#header ul{
+	margin-top: 4%;
+	text-align: center;
+}
+#header li{
+	display: inline;
+	padding:1.2%;
+}
+#menu li a {
+font-weight: 600;
+text-decoration: none;
+/* color: #00485b; */
+color: rgba(43,85,132,0.9);
+font-size: 1.2em;
+text-transform: uppercase;
+}
+
+#menu li a:hover {
+	color: rgba(188,43,28,1.0);
+	border-bottom: 2px solid rgba(188,43,28,1.0);
+}
+
+#menu .current-menu-item a, #menu li.current-page-ancestor a{
+  color: rgba(188,43,28,1.0);
+}
+
+/*---Body---*/
+.wrapper {
+	padding: 4% 15%;
+	clear: both;
+	overflow:auto;
+}
+.wrapper:first-child{
+padding-top:8%;
+}
+
+#about {
+padding-top: 0%;
+text-align: left;
+}
+
+#tech {
+	background: rgba(130,167,209,1.0);
+}
+
+#tech h1, #tech p {
+	color: #ffffff;
+}
+
+#invest{
+	/* background: #64C1C6; */
+}
+
+#contact {
+	background: rgba(0,155,188,1.0);
+	color: white !important;
+	text-align: center;
+	padding-top: 1%;
+}
+
+#contact h1{
+	color: white !important;
+}
+
+#footer {
+	background: rgba(43,85,132,1.0);
+	color: white !important;
+	bottom: 0;
+	padding-top: 2%;
+	clear:both;
+	text-align: center;
+}
+
+#footer p{
+	padding: 2%;
+	margin: 0 !important;
+	color: rgba(255,255,255,0.5);
+	font-size: 0.9em;
+}
+
+#footer img {
+width: 4em;
+}
+
+/*.page-template-default h1:nth-child(1),
+.page-template-default p:nth-child(1) {
+background: rgba(130,167,209,1.0);
+margin: 0 -21%;
+padding-right: 40%;
+padding-left: 40%;
+overflow: initial;
+color: white;
+text-align: center;
+}*/
+
+.ingress,
+pre {
+background: rgba(130,167,209,1.0);
+margin: 0 -21%;
+padding-right: 40%;
+padding-left: 40%;
+overflow: initial;
+color: white;
+text-align: center;
+/*padding-top: 2%;*/
+padding-bottom: 2%;
+ white-space: pre-line;
+}
+pre{
+	font-size: 1.1em;
+	padding-bottom: 5%;
+	margin-bottom: 5%;
+	font-weight: 400;
+	letter-spacing: 0.5px;
+	line-height: 120%;
+}
+
+.ingress h1 {
+padding-top: 8%;
+}
+
+.ingress p{
+padding-bottom: 8%;
+}
+
+.alignright {
+float:right;
+}
+
+/*---Bildspel---*/
+.frs-slideshow-container#stayble-homepagepjc {
+margin-top: 0px !important;
+padding-top: 7%;
+}
+
+ul.frs-bullets {
+margin-top: -40px !important;
+}
+
+.frs-slideshow-container .frs-wrapper.frs-skin-minimalist ul.frs-bullets li.frs-slideshow-nav-bullets {
+	background: rgba(224,225,226,1.0) !important;
+}
+.frs-slideshow-container .frs-wrapper.frs-skin-minimalist ul.frs-bullets li.frs-bullets-active{
+	background: rgba(46,55,109,1.0) !important;
+}
+
+
+
+.frs-slideshow-container#stayble-homepagepjc {
+	margin-top: 25px;
+	margin-bottom: 75px;
+}
+#stayble-homepagepjc-slideshow .frs-caption p, 
+#stayble-homepagepjc-slideshow .frs-caption h4{
+    color: white !important;
+}
+
+.frs-wrapper.frs-skin-minimalist .frs-caption div.frs-caption-outer div.frs-caption-inner h4 {
+line-height: 100% !important;
+}
+
+p.frs-caption-button.frs-buttonskin-white a span {
+font-size: 1.4em;
+}
+.frs-caption-content h4 {
+	margin-top: 36px;
+	/* border: 2px solid rgba(162,191,230,1.0); */
+}
+
+/*---POST---*/
+#postWrapper{
+	width: 75%;
+	float:left;
+	position: relative;
+	/*background: #eee;*/
+}
+.post {
+	padding:4% 0;
+	border-bottom: 2px solid #00485b;
+	/*margin-bottom: 5%;*/
+}
+.post:last-of-type {
+border-bottom: none;
+/*margin-bottom: 4%;*/
+}
+#post {
+	padding: 36px;
+	background: rgba(224, 225, 226, 0.3);
+}
+/* column */
+.ezcol-one-quarter, .ezcol-one-half, .ezcol-three-quarter, .ezcol-one-third, .ezcol-two-third, .ezcol-one-fifth, .ezcol-two-fifth, .ezcol-three-fifth, .ezcol-four-fifth {
+margin-right: 2% !important;
+/* margin-top: 5% !important; */
+margin-bottom: 5% !important;
+}
+
+.ezcol-one-quarter img, .ezcol-one-half img, .ezcol-three-quarter, img .ezcol-one-third img, .ezcol-two-third img, .ezcol-one-fifth img, .ezcol-two-fifth img, .ezcol-three-fifth img, .ezcol-four-fifth img {
+max-width: 100%;
+height: auto;
+}
+
+h1 a,
+h2 a {
+font-size: 1.1em;
+padding: 1% 0;
+text-decoration: none !important;
+font-weight: 600;
+}
+
+.post img{
+	max-width: 90%;
+	display: none;
+	margin: 2% 0;
+}
+#sidebar{
+	width: 13%;
+	margin-right:15%;
+	float:right;
+	/*background: #ccc;*/
+	background: rgba(224,225,226,0.3);
+	/*margin-bottom: 10%;*/
+	/* padding: 2% 0; */
+	padding: 24px;
+	position: relative;
+	display: block;
+	margin-left:0;
+	margin-top:0;
+}
+.widget-title{
+	margin-top: 7%;
+	padding-bottom: 2%;
+	font-size: 1.3em;
+	font-weight: 600;
+}
+.widget-container ul{
+	padding-left: 5%;
+}
+.entry-meta{
+	font-style: italic;
+}
+.entry-footer{
+	display:none;
+}
+button {
+background: rgba(125,55,135,1.0);
+border: none;
+padding: 1.5% 4%;
+color: white;
+cursor: pointer;
+float: right;
+margin: 2% 2%;
+font-size: 0.9em;
+}
+
+button:hover{
+	background: rgba(188,43,28,1.0);
+}
+
+.clear {
+clear: both;
+}
+
+/*---Single Post ---*/
+#post{
+	text-align: center;
+	margin: -3%;
+}
+#post img{
+	max-width: 90%;
+	display: block;
+	margin: 2% auto;
+}
+#nav-below{
+	text-align: center;
+	margin-bottom: 5%;
+}
+/*---About us---*/
+#empolyee-Wrapper{
+	margin-top: 48px;
+}
+.empolyee{
+	width: 46%;
+	float: left;
+	padding: 2%;
+	height: 400px;
+}
+.empolyee img{
+	outline: 0;
+	width: 100%;
+	height: auto;
+}
+
+.empolyee h2 {
+margin-top: 3%;
+}
+
+/*---Map (contact)---*/
+#map{
+	width: 100%;
+	padding-top:7%;
+}
+#map iframe{
+	width:100%;
+	height: 300px;
+}
+/*---Contact form ---*/
+#about-contact{
+	width: 45%;
+	padding-left: 15%;
+	padding-bottom:5%;
+	margin: 0;
+	float:left;
+}
+
+#contact-contact{
+	width: 28%;
+float: left;
+background: #dfe1e2;
+padding: 5.7%;
+/*padding-right: 10%;*/
+padding-bottom: 8%;
+padding-top: 5%;
+border-left: 6px solid rgba(125,55,135, 0.3);
+}
+#contact-contact .wpcf7 textarea{
+	width: 58% !important;
+	margin-top:-35%;
+	/*outline:1px solid #7d3687;*/
+}
+#contact-contact .wpcf7 input{
+	/*outline:1px solid #7d3687;*/
+
+}
+#contact-wrapper{
+width: 50%;
+margin: auto;
+}
+.wpcf7 input, .wpcf7 textarea {
+font-size:0.9em;
+padding: 0.5%;
+text-align: left;
+border: none;
+outline: none;
+color: rgba(125,55,135,1.0);
+}
+.wpcf7 input{
+	width: 37%;
+	padding: 2% 1%;
+	display: block;
+}
+.wpcf7 textarea{
+	width:61%;
+	display: block;
+	float: right;
+	margin-top: -32%;
+	height: 140px;
+	resize: none;
+}
+
+input.wpcf7-form-control.wpcf7-submit {
+width:100% !important;
+text-align: center;
+display: block;
+margin: auto;
+background: rgba(125,55,135,1.0);
+color: white;
+border: none;
+padding: 1% 0;
+font-size: 1.1em;
+margin-top: 10px;
+clear:both;
+}
+input.wpcf7-form-control.wpcf7-submit:hover {
+background: #C2370C;
+cursor: pointer;
+}
+div.wpcf7-validation-errors, .wpcf7-response-output wpcf7-display-none wpcf7-validation-errors {
+	color: white;
+	border: 1px solid white;
+}
+
+/* Back to top */
+#smoothup{
+height: 40px;
+width: 40px;
+position: fixed;
+bottom: 50px;
+right: 100px;
+text-indent: -9999px;
+display: none;
+background: url('../../../testbilder/mapicon.png');
+background-size: cover;
+}
+#smoothup: hover{
+width:45px;
+height: 45px;
+}
+
+@media only screen and (max-width:800px){
+
+#header{
+	position: relative;
+	z-index: 5000;
+}
+
+#click-menu{
+	z-index: 10000;
+}
+
+
+#header img {
+width: 40%;
+float:none;
+display: block;
+margin: 2%;
+min-width: 220px;
+z-index: 1000;
+}
+#header ul{
+	display: none;
+}
+#map, 
+.frs-slideshow-container#stayble-homepagepjc {
+display: none;
+}
+#about{
+	padding-top: 2%; 
+} 
+
+.ezcol-one-quarter, .ezcol-one-half, .ezcol-three-quarter, 
+.ezcol-one-third, .ezcol-two-third, .ezcol-one-fifth, 
+.ezcol-two-fifth, .ezcol-three-fifth, .ezcol-four-fifth {
+	width:100% !important;
+	float: none;
+}
+.ezcol-one-quarter img, .ezcol-one-half img, 
+.ezcol-three-quarter img, .ezcol-one-third img, 
+.ezcol-two-third img, .ezcol-one-fifth img, 
+.ezcol-two-fifth img, .ezcol-three-fifth img, .ezcol-four-fifth img {
+width: 100% !important;
+}
+
+/*Contact*/
+#contact-contact{
+	width:60%;
+	margin: 0 ;
+	padding:2% 20%;
+	border:none;
+}
+
+#contact-contact .wpcf7 textarea{
+	margin-top: 0;
+	width: 100% !important;
+}
+ .wpcf7 textarea,
+ .wpcf7 input{
+	float:none;
+	width: 100% !important;
+	margin:  0;
+}
+} 
+
+
+@media only screen and (min-width:981px) and (max-width: 1100px){
+	#about-contact{
+	width: 70%;
+	padding: 2% 15%;
+	float:none;
+	clear: both;
+	overflow: auto;
+	background: none;
+	}
+#contact-contact{
+	width: 100%;
+float: none;
+display: block;
+background: #dfe1e2;
+padding: 0;
+padding-top: 5%;
+display: block;
+border-top: 6px solid rgba(125,55,135, 0.3);
+border-left: 0;
+
+}
+#contact-contact .wpcf7 textarea{
+	width: 28% !important;
+	margin-top:-14%;
+}
+#contact-contact .wpcf7 input{
+	width: 15%;
+}
+#contact-contact .wpcf7 input, .wpcf7 textarea {
+font-size:0.9em;
+padding: 0.5%;
+text-align: left;
+border: none;
+outline: none;
+color: rgba(125,55,135,1.0);
+}
+#contact-contact .wpcf7 input{
+	width: 18% !important;
+	padding: 1%;
+	margin: -1% 0;
+	margin-left: 25%;
+}
+#contact-contact .wpcf7 textarea{
+	width:65%;
+	display: block;
+	margin-top: -16% !important;
+	resize: none;
+	margin-right: 25%;
+}
+
+#contact-contact input.wpcf7-form-control.wpcf7-submit {
+width:50% !important;
+text-align: center;
+display: block;
+margin: auto;
+background: rgba(125,55,135,1.0);
+color: white;
+border: none;
+padding: 1% 0;
+font-size: 1.1em;
+margin-top: 10px;
+clear:both;
+}
+
+}
+
+@media only screen and (min-width:801px) and (max-width: 980px){
+#header{
+width: 100%;
+border-bottom: 1px solid #0F3D4D;
+overflow: visible;
+position: absolute;
+}
+
+#header img{
+width: 20%;
+display: block;
+margin-left: 2% !important;
+}
+
+#header ul{
+margin-top: 4%;
+margin-bottom: 2%;
+}
+#header li{
+display: inline;
+padding:1.2%;
+}
+#menu li a {
+font-weight: 600;
+text-decoration: none;
+/* color: #125770; */
+color: rgba(63,110,185,1.0);
+/* font-family: verdana; */
+}
+
+#map,
+.frs-slideshow-container#stayble-homepagepjc {
+margin-top: 0px !important;
+padding-top: 8%;
+}
+.frs-slideshow-container{
+margin-bottom: 0 !important;
+}
+.frs-caption-content{
+	width: 70% !important;
+margin:auto;
+margin-top: -5% !important;
+}
+.frs-wrapper.frs-skin-minimalist .frs-caption div.frs-caption-outer div.frs-caption-inner h4 {
+font-size: 30px !important;
+}
+.frs-wrapper.frs-skin-minimalist .frs-caption div.frs-caption-outer div.frs-caption-inner p {
+	font-size: 12px;
+	font-weight: lighter;
+}
+.frs-wrapper.frs-skin-minimalist .frs-caption div.frs-caption-outer div.frs-caption-inner span {
+	font-size: 15px !important;
+}
+
+ .wrapper {
+padding: 2% 5%;
+} 
+/*Contact*/
+.wpcf7 textarea{
+	margin-top:-32%;
+}
+.wpcf7-form-control.wpcf7-submit{
+	width: 80% !important;
+}
+
+#contact{
+width:100%;
+padding:0;
+}
+#contact-contact .wpcf7 textarea{
+	margin-top:-28% !important;
+}
+#contact-contact{
+	width:70%;
+	padding:2% 15%;
+	margin:0;
+	border: 0;
+}
+
+} 
